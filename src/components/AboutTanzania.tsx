@@ -38,22 +38,22 @@ const AboutTanzania = () => {
     {
       title: "Serengeti National Park",
       description: "Home to the Great Migration, one of the most spectacular wildlife events on Earth.",
-      image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80"
+      image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c2VyZW5nZXRpfHx8fHx8MTY4MDEyMzQ1Mw&ixlib=rb-4.0.3&q=80&w=1080"
     },
     {
       title: "Mount Kilimanjaro",
       description: "Africa's highest peak and one of the world's most climbable high mountains.",
-      image: "https://images.unsplash.com/photo-1681807535409-6c0cee4ebd6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+      image: "https://images.unsplash.com/photo-1589553416260-f586c8f1514f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8a2lsaW1hbmphcm98fHx8fHwxNjgwMTIzNTAw&ixlib=rb-4.0.3&q=80&w=1080"
     },
     {
       title: "Zanzibar Beaches",
       description: "Crystal clear waters, white sand beaches, and a rich cultural heritage.",
-      image: "https://images.unsplash.com/photo-1586500036702-b967638fedf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+      image: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8emFuemliYXJ8fHx8fHwxNjgwMTIzNTQy&ixlib=rb-4.0.3&q=80&w=1080"
     },
     {
       title: "Ngorongoro Crater",
       description: "The world's largest intact volcanic caldera and a natural wonder.",
-      image: "https://images.unsplash.com/photo-1574013548234-a201dae7a562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      image: "https://images.unsplash.com/photo-1565369728672-972124931da2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bmNvcm9uZ29yb3x8fHx8fDE2ODAxMjM2MzQ&ixlib=rb-4.0.3&q=80&w=1080"
     },
   ];
 
