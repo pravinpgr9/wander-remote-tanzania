@@ -4,6 +4,7 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,22 +15,33 @@ const Hero = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+
+    // Auto-play video when component mounts
+    if (videoRef.current) {
+      videoRef.current.play().catch(err => {
+        console.log('Video autoplay was prevented:', err);
+      });
+    }
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <section id="home" className="relative h-screen overflow-hidden">
-      {/* Background Image with Parallax Effect */}
+      {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
-        <div
-          className="w-full h-[120%] bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80)',
-            transform: 'translateZ(0)',
-          }}
-          ref={heroRef}
-        />
-        <div className="absolute inset-0 bg-black/30" />
+        <video
+          ref={videoRef}
+          className="absolute object-cover w-full h-full"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-mount-kilimanjaro-40662-large.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Content */}
