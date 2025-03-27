@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 const AboutTanzania = () => {
   const featuresRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,6 +23,13 @@ const AboutTanzania = () => {
       Array.from(childElements).forEach((child) => {
         child.classList.add('opacity-0');
         observer.observe(child);
+      });
+    }
+
+    // Auto-play video when component mounts
+    if (videoRef.current) {
+      videoRef.current.play().catch(err => {
+        console.log('Video autoplay was prevented:', err);
       });
     }
 
@@ -58,8 +66,24 @@ const AboutTanzania = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-tanzania-savanna">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="about" className="py-20 md:py-32 relative overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <video
+          ref={videoRef}
+          className="absolute object-cover w-full h-full opacity-20"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-wild-zebras-in-the-savanna-4559-large.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-1"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm uppercase tracking-widest text-tanzania-earth mb-3 font-medium">Discover Tanzania</h2>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold font-playfair mb-6 text-tanzania-kilimanjaro">
